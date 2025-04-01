@@ -10,7 +10,7 @@ export default function TodoFilter({ filter, setFilter, todos }) {
         </span>
       </div>
 
-      <div className="flex space-x-2">
+      <div className="flex gap-2">
         <button
           onClick={() => setFilter("all")}
           className={`px-3 py-1 rounded ${

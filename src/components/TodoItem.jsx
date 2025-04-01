@@ -15,23 +15,23 @@ export default function TodoItem({ todo, toggleTodo, updateTodo, deleteTodo }) {
     <li className="border rounded-lg mb-2 overflow-hidden">
       <div className="p-4 flex items-center justify-between bg-white">
         {isEditing ? (
-          <div className="flex-grow flex items-center">
+          <div className="flex-grow flex items-center gap-2">
             <input
               type="text"
               value={editValue}
               onChange={(e) => setEditValue(e.target.value)}
-              className="flex-grow px-2 py-1 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex-grow px-2 py-1 border rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               autoFocus
             />
             <button
               onClick={handleEditSubmit}
-              className="ml-2 bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded"
+              className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded"
             >
               Save
             </button>
             <button
               onClick={() => setIsEditing(false)}
-              className="ml-2 bg-gray-300 hover:bg-gray-400 text-gray-800 px-3 py-1 rounded"
+              className="bg-gray-300 hover:bg-gray-400 text-gray-800 px-3 py-1 rounded"
             >
               Cancel
             </button>
@@ -43,7 +43,7 @@ export default function TodoItem({ todo, toggleTodo, updateTodo, deleteTodo }) {
                 type="checkbox"
                 checked={todo.completed}
                 onChange={() => toggleTodo(todo.id)}
-                className="h-5 w-5 text-blue-500 rounded focus:ring-0"
+                className="h-5 w-5 text-blue-500 rounded accent-blue-500 focus-visible:ring-0"
               />
               <span
                 className={`ml-3 ${
@@ -55,10 +55,10 @@ export default function TodoItem({ todo, toggleTodo, updateTodo, deleteTodo }) {
                 {todo.title}
               </span>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center gap-2">
               <button
                 onClick={() => setIsEditing(true)}
-                className="text-blue-500 hover:text-blue-700 mr-2"
+                className="text-blue-500 hover:text-blue-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

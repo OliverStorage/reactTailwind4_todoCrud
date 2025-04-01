@@ -20,7 +20,7 @@ export default function TodoList({
       {filteredTodos.length === 0 ? (
         <p className="text-center text-gray-500 py-4">No todos to display</p>
       ) : (
-        <ul>
+        <ul className="flex flex-col gap-2">
           {filteredTodos.map((todo) => (
             <TodoItem
               key={todo.id}
