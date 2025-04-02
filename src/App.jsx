@@ -19,7 +19,7 @@ function TodoApp() {
       <div className="max-w-md mx-auto">
         {/* Header with User Info */}
         <div className="flex justify-between items-center mb-4 px-6">
-          <h1 className="text-2xl font-bold text-gray-800">React Todo App</h1>
+          <h1 className="text-2xl font-bold text-gray-800">Todo App</h1>
 
           <button
             onClick={() => setShowProfile(!showProfile)}

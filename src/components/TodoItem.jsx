@@ -20,6 +20,7 @@ export default function TodoItem({ todo, toggleTodo, updateTodo, deleteTodo }) {
               type="text"
               value={editValue}
               onChange={(e) => setEditValue(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleEditSubmit()}
               className="flex-grow px-2 py-1 border rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               autoFocus
             />
